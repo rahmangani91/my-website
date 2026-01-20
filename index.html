@@ -9,9 +9,21 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #ffffff;
       color: #111;
       line-height: 1.6;
+
+      /* DOODLE BACKGROUND + FADE */
+      background:
+        linear-gradient(
+          rgba(255,255,255,0.88),
+          rgba(255,255,255,0.88)
+        ),
+        url("images/doodle-bg.webp");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
 
     .container {
@@ -19,6 +31,10 @@
       max-width: 420px;
       margin: auto;
       text-align: center;
+
+      /* FLOATING CARD EFFECT */
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
     }
 
     .logo {
