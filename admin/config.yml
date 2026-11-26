@@ -1,10 +1,7 @@
 
 backend:
-  name: github
-  repo: rahmangani91/my-website
-  branch: redesign-tech-blog
-  base_url: https://turbo.decapcms.org
-  auth_endpoint: auth
+  name: turbo-github
+  turbo_site_id: be236d9e-2164-4741-bf35-7a7a8d07f76c
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
