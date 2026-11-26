@@ -5,7 +5,7 @@ date: 2026-11-26T11:53:00.000+08:00
 description: Mengenali vivo X200 Pro, telefon flagship dengan kamera ZEISS
   200MP, cip Dimensity 9400, skrin AMOLED 120Hz dan bateri besar 6000mAh. Jom
   lihat spesifikasi dan ciri menariknya.
-thumbnail: ""
+thumbnail: /images/uploads/vivo-x200-pro-zeiss-camera-review.png
 category: Smartphone
 tags:
   - vivo
