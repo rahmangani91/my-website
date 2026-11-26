@@ -1,0 +1,53 @@
+
+backend:
+  name: github
+  repo: rahmangani91/my-website
+  branch: redesign-tech-blog
+  base_url: https://turbo.decapcms.org
+  auth_endpoint: auth
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: "https://rahmangani.my"
+display_url: "https://rahmangani.my"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Description"
+        name: "description"
+        widget: "text"
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+      - label: "Category"
+        name: "category"
+        widget: "string"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+      - label: "SEO Description"
+        name: "seo_description"
+        widget: "text"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
