@@ -8,6 +8,10 @@
   <title>Rahman Gani | Technology Made Simple</title>
   <meta name="description" content="Gadget discoveries, practical IT tips, technology guides, apps and digital knowledge by Rahman Gani.">
   <meta name="theme-color" content="#fafaf8">
+  <meta name="color-scheme" content="light">
+  <meta property="og:title" content="Rahman Gani | Technology Made Simple">
+  <meta property="og:description" content="Gadget discoveries, practical IT tips, technology guides, apps and digital knowledge.">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="images/logo.webp" type="image/webp">
 
@@ -693,6 +697,232 @@
         flex-wrap: wrap;
       }
     }
+  
+
+    /* REFINEMENT: polished editorial cards and responsive details */
+    :root {
+      --accent: #d99b24;
+      --accent-deep: #a96d08;
+      --shadow-soft: 0 12px 34px rgba(32, 33, 36, .055);
+    }
+
+    ::selection {
+      background: #f6d98e;
+      color: #202124;
+    }
+
+    .hero {
+      gap: clamp(36px, 6vw, 76px);
+    }
+
+    .hero-visual {
+      box-shadow: 0 22px 55px rgba(25, 25, 25, .10);
+    }
+
+    .hero-logo {
+      box-shadow: 0 16px 38px rgba(0, 0, 0, .25);
+    }
+
+    .featured,
+    .article-card,
+    .category-card {
+      box-shadow: 0 2px 8px rgba(32, 33, 36, .018);
+    }
+
+    .featured {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .featured:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .featured-art {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-art::after {
+      content: "RG  /  TECH NOTES";
+      position: absolute;
+      left: 24px;
+      bottom: 20px;
+      color: rgba(90, 59, 8, .65);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .tech-symbol {
+      box-shadow: 0 18px 40px rgba(121, 80, 14, .12);
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(32, 33, 36, .09);
+      border-color: #e3d3ad;
+    }
+
+    .article-art {
+      min-height: 190px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      font-size: 58px;
+    }
+
+    .article-art::before {
+      content: "";
+      position: absolute;
+      width: 175px;
+      height: 175px;
+      border: 1px solid rgba(255,255,255,.48);
+      border-radius: 50%;
+      z-index: -1;
+      transform: translate(48px, 32px);
+    }
+
+    .article-art::after {
+      content: "";
+      position: absolute;
+      width: 105px;
+      height: 105px;
+      border: 1px solid rgba(255,255,255,.38);
+      border-radius: 24px;
+      z-index: -1;
+      transform: rotate(22deg) translate(-24px, -18px);
+    }
+
+    .art-gadget { background: linear-gradient(135deg, #e6edf6, #d5e1ef); }
+    .art-tips { background: linear-gradient(135deg, #f7edda, #efd9aa); }
+    .art-ai { background: linear-gradient(135deg, #eeeafa, #dcd4f0); }
+    .art-wifi { background: linear-gradient(135deg, #e1eee9, #c9e2d8); }
+    .art-apps { background: linear-gradient(135deg, #f7e8e7, #efd1ce); }
+    .art-guide { background: linear-gradient(135deg, #eceeed, #d9dfdd); }
+
+    .article-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .article-info h3 {
+      transition: color .2s ease;
+    }
+
+    .article-card:hover .article-info h3 {
+      color: var(--accent-deep);
+    }
+
+    .article-meta {
+      margin-top: auto;
+      padding-top: 17px;
+      letter-spacing: .35px;
+    }
+
+    .category-card {
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+
+    .category-card:hover {
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-box {
+      box-shadow: 0 18px 45px rgba(25, 25, 25, .08);
+    }
+
+    .button:focus-visible,
+    a:focus-visible,
+    .menu-toggle:focus-visible {
+      outline: 3px solid rgba(217, 155, 36, .55);
+      outline-offset: 4px;
+    }
+
+    @media (min-width: 1100px) {
+      .article-grid {
+        gap: 24px;
+      }
+
+      .article-art {
+        min-height: 195px;
+      }
+
+      .article-info {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        gap: 28px;
+      }
+
+      .hero-visual {
+        min-height: 225px;
+        border-radius: 22px;
+      }
+
+      .hero-logo {
+        width: 118px;
+        height: 118px;
+      }
+
+      .featured-art {
+        min-height: 190px;
+      }
+
+      .featured-art::after {
+        left: 18px;
+        bottom: 15px;
+        font-size: 9px;
+      }
+
+      .article-grid {
+        gap: 18px;
+      }
+
+      .article-art {
+        min-height: 155px;
+        font-size: 50px;
+      }
+
+      .article-info {
+        padding: 20px;
+      }
+
+      .article-info h3 {
+        font-size: 18px;
+      }
+
+      .section-heading {
+        margin-bottom: 24px;
+      }
+
+      .about-box {
+        border-radius: 19px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+
   </style>
 </head>
 
